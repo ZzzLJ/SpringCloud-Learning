@@ -5,12 +5,12 @@ eureka:
   instance:
     hostname: localhost
   client:
-    #表示是否将自己注册在EurekaServer上，默认为true。由于当前应用就是EurekaServer，所以置为false，表示不想注册中心注册自己
+    #表示当前服务是否注册到eureka上，默认为true。由于当前应用就是eureka server，所以置为false，表示不向注册中心注册自己
     register-with-eureka: false
-    #表示是否从EurekaServer获取注册信息，默认为true。单节点不需要同步其他的EurekaServer节点的数据
-    #维护服务实例，不去检索服务
+    #表示是否从eureka获取注册服务信息，默认为true。单节点eureka不需要同步其他eureka的节点数据
+    #默认为true，表示检索服务，获取eureka服务清单
     fetch-registry: false
-    #设置Eureka的地址
+    #设置其他服务注册到Eureka的地址
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:

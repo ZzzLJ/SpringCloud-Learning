@@ -10,7 +10,7 @@ spring:
   application:
     name: server-zuul
 
-#¶¯Ì¬Â·ÓÉ ·şÎñ¹ıÂË
+#åŠ¨æ€è·¯ç”± æœåŠ¡è¿‡æ»¤
 zuul:
   routes:
     server-first:

@@ -3,7 +3,7 @@
     │  │  └─com
     │  │      └─springcloud
     │  │          └─configserver
-    │  │                  ConfigServerApplication.java      @EnableConfigServer     开启配置服务器功能
+    │  │                  ConfigServerApplication.java      @EnableConfigServer     开启配置服务
     │  │
     │  └─resources
     │      │  application.yml       分布式配置中心组件

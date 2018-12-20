@@ -25,7 +25,7 @@
 #### Reference
 * [《史上最简单的Spring Cloud教程源码》](https://github.com/forezp/SpringCloudLearning)
 * [外行人都能看懂的SpringCloud，错过了血亏！](https://blog.csdn.net/bntX2jSQfEHy7/article/details/82921219)
-* []()
+* [SpringCloud入门教程](http://www.cnblogs.com/chry/p/7248947.html)
 * []()
 * []()
 * []()

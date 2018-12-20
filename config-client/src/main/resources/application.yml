@@ -6,33 +6,30 @@ spring:
     name: config-client
   cloud:
     config:
-      #ÅäÖÃ·şÎñÖĞĞÄµÄµØÖ·
+      #é…ç½®æœåŠ¡ä¸­å¿ƒçš„åœ°å€
       #uri: http://localhost:8888/
-      #Ö¸Ã÷Ô¶³Ì²Ö¿âµÄ·ÖÖ§
+      #æŒ‡æ˜è¿œç¨‹ä»“åº“çš„åˆ†æ”¯
       label: master
-      #dev£º¿ª·¢»·¾³   test£º²âÊÔ»·¾³   pro£ºÉú²ú»·¾³
+      #devï¼šå¼€å‘ç¯å¢ƒ   testï¼šæµ‹è¯•ç¯å¢ƒ   proï¼šç”Ÿäº§ç¯å¢ƒ
       profile: dev
       discovery:
-        #ÊÇ·ñ´ÓÅäÖÃÖĞĞÄ¶ÁÈ¡ÎÄ¼ş
+        #æ˜¯å¦ä»é…ç½®ä¸­å¿ƒè¯»å–æ–‡ä»¶
         enabled: true
-        #·şÎñÃû£¬¶ÁÈ¡ÅäÖÃÎÄ¼ş²»ÔÙĞ´ipµØÖ·£¬¶øÊÇ·şÎñÃû
+        #æœåŠ¡åï¼Œè¯»å–é…ç½®æ–‡ä»¶ä¸å†é€šè¿‡urlï¼Œè€Œæ˜¯æœåŠ¡å
         service-id: config-server
   rabbitmq:
     host: localhost
+    #rabbitmqé»˜è®¤çš„ç«¯å£ã€è´¦æˆ·åã€å¯†ç 
     port: 5672
-    username:
-    password:
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-    #Ä¬ÈÏÎªtrue£¬±íÊ¾µ±Ç°·şÎñ×¢²áµ½eureka
-    #false£¬±íÊ¾µ±Ç°·şÎñ²»×¢²áµ½eureka£¬²»¶ÔÍâÌá¹©·şÎñ
-    register-with-eureka: true
-    #Ä¬ÈÏÎªtrue£¬±íÊ¾¼ìË÷·şÎñ£¬»ñÈ¡eureka·şÎñÇåµ¥
+    #é»˜è®¤ä¸ºtrueï¼Œè¡¨ç¤ºå½“å‰æœåŠ¡æ³¨å†Œåˆ°eureka
+    #falseï¼Œè¡¨ç¤ºå½“å‰æœåŠ¡ä¸æ³¨å†Œåˆ°eurekaï¼Œä¸å¯¹å¤–æä¾›æœåŠ¡
+    register-with-eureka: false
+    #é»˜è®¤ä¸ºtrueï¼Œè¡¨ç¤ºæ£€ç´¢æœåŠ¡ï¼Œè·å–eurekaæœåŠ¡æ¸…å•
     fetch-registry: true
-
-spring.cloud.bus.enabled=true
-spring.cloud.bus.trace.enabled=true
-management.endpoints.web.exposure.include=bus-refresh
