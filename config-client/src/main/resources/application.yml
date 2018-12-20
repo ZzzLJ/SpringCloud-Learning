@@ -1,0 +1,38 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      #配置服务中心的地址
+      #uri: http://localhost:8888/
+      #指明远程仓库的分支
+      label: master
+      #dev：开发环境   test：测试环境   pro：生产环境
+      profile: dev
+      discovery:
+        #是否从配置中心读取文件
+        enabled: true
+        #服务名，读取配置文件不再写ip地址，而是服务名
+        service-id: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username:
+    password:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    #默认为true，表示当前服务注册到eureka
+    #false，表示当前服务不注册到eureka，不对外提供服务
+    register-with-eureka: true
+    #默认为true，表示检索服务，获取eureka服务清单
+    fetch-registry: true
+
+spring.cloud.bus.enabled=true
+spring.cloud.bus.trace.enabled=true
+management.endpoints.web.exposure.include=bus-refresh

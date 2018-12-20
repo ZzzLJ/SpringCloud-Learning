@@ -19,6 +19,10 @@
         <module>eureka-server</module>
         <module>server-client</module>
         <module>server-ribbon</module>
+        <module>server-feign</module>
+        <module>server-zuul</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
 
     <properties>

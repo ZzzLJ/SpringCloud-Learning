@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 @RestController
 public class ServerClientFirstApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ServerClientFirstApplication.class, args);
     }
@@ -21,8 +20,7 @@ public class ServerClientFirstApplication {
 
     @RequestMapping("/server-client")
     public String test(){
-        return serverPort;
+        return "server-client:" + serverPort;
     }
-
 }
 
