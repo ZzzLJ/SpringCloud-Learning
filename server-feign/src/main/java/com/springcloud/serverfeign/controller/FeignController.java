@@ -3,6 +3,7 @@ package com.springcloud.serverfeign.controller;
 import com.springcloud.serverfeign.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,5 +15,10 @@ public class FeignController {
     @RequestMapping("/server-feign")
     public String test(){
         return "feign ++ " + feignService.TransferAnotherServer();
+    }
+
+    @RequestMapping("/testDeviceIsExists")
+    public Boolean testDeviceIsExists(@RequestParam String deviceId){
+        return feignService.deviceIsExists(deviceId);
     }
 }
